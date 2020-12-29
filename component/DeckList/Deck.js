@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text,View, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet, Button} from 'react-native';
+import DeckDetails from "./DeckDetails";
 
 export default class Deck extends React.Component {
 
@@ -8,7 +9,12 @@ export default class Deck extends React.Component {
             <View style={styles.deckContainer}
             onPress>
                 <Text style={styles.title}>{this.props.deckName}</Text>
-                <Text style={styles.subtitle}> {this.props.amountCards} cards</Text>
+                <Text style={styles.subtitle}
+                > {this.props.amountCards} cards</Text>
+                <Button
+                    title="Go to Details"
+                    onPress={() => this.props.navigation.navigate('Details')}
+                />
             </View>
 
         );

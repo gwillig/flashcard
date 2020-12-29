@@ -1,12 +1,18 @@
-import React from 'react';
+import * as React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack'
-import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
 import Deck from './Deck'
+function DetailsScreen() {
+    return (
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <Text>Details!</Text>
+        </View>
+    );
+}
 
 
-
-class DeckList extends React.Component {
+class HomeScreen extends React.Component{
     state={
         decks:[{name:"REACT",amountCards:"30"},
             {name:"Backend",amountCards:"15"}
@@ -21,40 +27,32 @@ class DeckList extends React.Component {
                         <Deck key={el.name}
                               deckName={el.name}
                               amountCards={el.amountCards}
+                              navigation={this.props.navigation}
                         >
-
                         </Deck>
                     )}
-                    <Button
-                        title="Go to Details"
-                        onPress={() => this.props.navigation.navigate('Details')}
-                    />
+                    {/*<Button*/}
+                    {/*    title="Go to Details"*/}
+                    {/*    onPress={() => this.props.navigation.navigate('Details')}*/}
+                    {/*/>*/}
                 </View>
 
             </View>
 
         )
     }
-
 }
-// export default class DeckList extends React.Component {
-//     render(){
-//         return (
-//             <Stack.Navigator>
-//                 <Stack.Screen
-//                     name="DeckContainer"
-//                     component={DeckContainer}
-//                 />
-//                 <Stack.Screen
-//                     name="Deck"
-//                     component={Deck}
-//
-//                 />
-//             </Stack.Navigator>
-//         );
-//     }
-//
-// }
+
+const HomeStack = createStackNavigator();
+
+function HomeStackScreen() {
+    return (
+        <HomeStack.Navigator >
+            <HomeStack.Screen options={{headerShown: false}}name="Home1" component={HomeScreen} />
+            <HomeStack.Screen name="Details" component={DetailsScreen} />
+        </HomeStack.Navigator>
+    );
+}
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -75,5 +73,4 @@ const styles = StyleSheet.create({
         fontWeight: "bold"
     }
 });
-
-export default DeckList
+export default HomeStackScreen
