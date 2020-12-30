@@ -9,6 +9,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import DeckList from './component/DeckList/DeckList'
 import DeckAdd from './component/DeckAdd/DeckAdd'
 import DeckDetails from "./component/DeckList/DeckDetails";
+import DeckListStackScreen from "./component/DeckList/DeckListStackScreen";
 
 
 
@@ -28,7 +29,7 @@ function MyTabs() {
       >
         <Tab.Screen
             name="DeckDetails"
-            component={DeckDetails}
+            component={DeckListStackScreen}
             options={{
               tabBarLabel: 'List of decks',
               tabBarIcon: ({ color, size }) => (

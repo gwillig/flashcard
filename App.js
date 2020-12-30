@@ -3,8 +3,9 @@ import { Button, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import DeckListStackScreen from './component/DeckList/HomeScreen'
-
+import DeckListStackScreen from './component/DeckList/DeckListStackScreen'
+import DeckAdd from './component/DeckAdd/DeckAdd'
+import {MaterialCommunityIcons} from "@expo/vector-icons";
 
 
 
@@ -27,26 +28,41 @@ function DetailsScreen1() {
         </View>
     );
 }
-
-const SettingsStack = createStackNavigator();
-
-function SettingsStackScreen() {
-    return (
-        <SettingsStack.Navigator screenOptions={{headerShown: false}}>
-            <SettingsStack.Screen name="Settings1" component={SettingsScreen} />
-            <SettingsStack.Screen name="Details" component={DetailsScreen1} />
-        </SettingsStack.Navigator>
-    );
-}
-
 const Tab = createBottomTabNavigator();
 
 export default function App() {
     return (
         <NavigationContainer>
-            <Tab.Navigator>
-                <Tab.Screen name="Home" component={DeckListStackScreen}  />
-                <Tab.Screen name="Settings" component={SettingsStackScreen} />
+            <Tab.Navigator
+                initialRouteName="DeckList"
+                tabBarOptions={{
+                    activeTintColor: 'white',
+                    style: {
+                        backgroundColor:"#19647e",
+                    }
+
+                }}
+            >
+                <Tab.Screen
+                    name="DeckListStackScreen"
+                    component={DeckListStackScreen}
+                    options={{
+                        tabBarLabel: 'List of decks',
+                        tabBarIcon: ({ color, size }) => (
+                            <MaterialCommunityIcons name="home" color={color} size={size} />
+                        ),
+                    }}
+                />
+                <Tab.Screen
+                    name="DeckAdd"
+                    component={DeckAdd}
+                    options={{
+                        tabBarLabel: 'Add new deck',
+                        tabBarIcon: ({ color, size }) => (
+                            <MaterialCommunityIcons name="layers-plus" color={color} size={size} />
+                        ),
+                    }}
+                />
             </Tab.Navigator>
         </NavigationContainer>
     );

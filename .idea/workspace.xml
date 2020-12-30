@@ -4,7 +4,10 @@
     <list default="true" id="8977fa83-3fac-4a30-bea3-aef0f6421df5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/DeckList/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/DeckList/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App_Deleteme.js" beforeDir="false" afterPath="$PROJECT_DIR$/App_Deleteme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/DeckList/DeckList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/DeckList/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/DeckList/DeckListStackScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/Router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609240264368</updated>
-      <workItem from="1609240265836" duration="18778000" />
+      <workItem from="1609240265836" duration="19323000" />
     </task>
     <servers />
   </component>
@@ -73,7 +76,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/App_Deleteme.js</url>
-          <line>16</line>
+          <line>17</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
