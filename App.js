@@ -3,7 +3,7 @@ import { Button, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeStackScreen from './component/DeckList/HomeScreen'
+import DeckListStackScreen from './component/DeckList/HomeScreen'
 
 
 
@@ -45,7 +45,7 @@ export default function App() {
     return (
         <NavigationContainer>
             <Tab.Navigator>
-                <Tab.Screen name="Home" component={HomeStackScreen}  />
+                <Tab.Screen name="Home" component={DeckListStackScreen}  />
                 <Tab.Screen name="Settings" component={SettingsStackScreen} />
             </Tab.Navigator>
         </NavigationContainer>

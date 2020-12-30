@@ -2,17 +2,12 @@ import * as React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+import DeckDetails from "./DeckDetails";
 import Deck from './Deck'
-function DetailsScreen() {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Details!</Text>
-        </View>
-    );
-}
 
 
-class HomeScreen extends React.Component{
+
+class DeckList extends React.Component{
     state={
         decks:[{name:"REACT",amountCards:"30"},
             {name:"Backend",amountCards:"15"}
@@ -31,10 +26,6 @@ class HomeScreen extends React.Component{
                         >
                         </Deck>
                     )}
-                    {/*<Button*/}
-                    {/*    title="Go to Details"*/}
-                    {/*    onPress={() => this.props.navigation.navigate('Details')}*/}
-                    {/*/>*/}
                 </View>
 
             </View>
@@ -43,14 +34,14 @@ class HomeScreen extends React.Component{
     }
 }
 
-const HomeStack = createStackNavigator();
+const DeckListStack = createStackNavigator();
 
-function HomeStackScreen() {
+function DeckListStackScreen() {
     return (
-        <HomeStack.Navigator >
-            <HomeStack.Screen options={{headerShown: false}}name="Home1" component={HomeScreen} />
-            <HomeStack.Screen name="Details" component={DetailsScreen} />
-        </HomeStack.Navigator>
+        <DeckListStack.Navigator >
+            <DeckListStack.Screen options={{headerShown: false}}name="Home1" component={DeckList} />
+            <DeckListStack.Screen name="Details" component={DeckDetails} />
+        </DeckListStack.Navigator>
     );
 }
 const styles = StyleSheet.create({
@@ -73,4 +64,4 @@ const styles = StyleSheet.create({
         fontWeight: "bold"
     }
 });
-export default HomeStackScreen
+export default DeckListStackScreen
