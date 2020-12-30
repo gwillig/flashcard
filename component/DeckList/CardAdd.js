@@ -1,18 +1,21 @@
 import React from 'react';
 import { Text, View, StyleSheet,TextInput,Button ,FlatList  } from 'react-native';
 
-const DeckAdd = () => {
+const CardAdd = () => {
     let submitform=(e)=>{
         console.log(e)
     }
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>What is the title of your new decks?</Text>
             <View style={styles.containerInput}>
                 <TextInput
                     style={styles.deckTitle}
-                    value="Deck Title"
+                    value="Question"
                 />
+                <TextInput
+                style={styles.deckTitle}
+                value="Answer"
+            />
                 <Button
                     // onPress={submitform}
                     title="Submit"
@@ -30,15 +33,6 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "#eaeaea"
     },
-    title: {
-        marginTop: 16,
-        paddingVertical: 8,
-        backgroundColor: "#19647e",
-        color: "white",
-        textAlign: "center",
-        fontSize: 30,
-        fontWeight: "bold"
-    },
     containerInput:{
         alignItems: 'center',
         justifyContent: 'center',
@@ -55,4 +49,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default DeckAdd;
+export default CardAdd;

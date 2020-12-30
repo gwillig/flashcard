@@ -6,32 +6,19 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import DeckListStackScreen from './component/DeckList/DeckListStackScreen'
 import DeckAdd from './component/DeckAdd/DeckAdd'
 import {MaterialCommunityIcons} from "@expo/vector-icons";
+//Redux
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducer from './component/redux/reducers'
+import middleware from './component/redux/middleware'
 
+const store = createStore(reducer, middleware)
 
-
-function SettingsScreen({ navigation }) {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Settings screen</Text>
-            <Button
-                title="Go to Details"
-                onPress={() => navigation.navigate('Details')}
-            />
-        </View>
-    );
-}
-
-function DetailsScreen1() {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Details!</Text>
-        </View>
-    );
-}
 const Tab = createBottomTabNavigator();
 
 export default function App() {
     return (
+        <Provider store={store}>
         <NavigationContainer>
             <Tab.Navigator
                 initialRouteName="DeckList"
@@ -57,7 +44,7 @@ export default function App() {
                     name="DeckAdd"
                     component={DeckAdd}
                     options={{
-                        tabBarLabel: 'Add new deck',
+                        tabBarLabel: 'Add new decks',
                         tabBarIcon: ({ color, size }) => (
                             <MaterialCommunityIcons name="layers-plus" color={color} size={size} />
                         ),
@@ -65,6 +52,7 @@ export default function App() {
                 />
             </Tab.Navigator>
         </NavigationContainer>
+        </Provider>
     );
 }
 

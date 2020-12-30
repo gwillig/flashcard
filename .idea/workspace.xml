@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8977fa83-3fac-4a30-bea3-aef0f6421df5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/component/redux/actions/Deck.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/redux/middleware/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/redux/middleware/logger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/redux/reducers/decks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/redux/reducers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App_Deleteme.js" beforeDir="false" afterPath="$PROJECT_DIR$/App_Deleteme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/DeckList/DeckList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/DeckList/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/DeckList/DeckListStackScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App_Deleteme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/DeckAdd/DeckAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/DeckAdd/DeckAdd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/DeckList/AddCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/DeckList/CardAdd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/DeckList/Deck.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/DeckList/Deck.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/DeckList/DeckDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/DeckList/DeckDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/DeckList/DeckListStackScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/DeckList/DeckListStackScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/DeckList/Quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/DeckList/Quiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/Router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609240264368</updated>
-      <workItem from="1609240265836" duration="19323000" />
+      <workItem from="1609240265836" duration="30534000" />
     </task>
     <servers />
   </component>
@@ -70,17 +81,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/App_Deleteme.js</url>
-          <line>17</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

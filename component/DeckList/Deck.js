@@ -1,19 +1,27 @@
 import React from 'react';
 import {Text, View, StyleSheet, Button} from 'react-native';
 import DeckDetails from "./DeckDetails";
+import {createStackNavigator} from "@react-navigation/stack";
+
+
+const DeckStack = createStackNavigator();
+
+
 
 export default class Deck extends React.Component {
 
     render(){
         return (
-            <View style={styles.deckContainer}
-            onPress>
+            <View style={styles.deckContainer}>
                 <Text style={styles.title}>{this.props.deckName}</Text>
                 <Text style={styles.subtitle}
                 > {this.props.amountCards} cards</Text>
                 <Button
                     title="Go to Details"
-                    onPress={() => this.props.navigation.navigate('Details')}
+                    onPress={() => this.props.navigation.navigate('DeckDetails',
+                            { deckName:this.props.deckName,
+                              amountCards:this.props.amountCards}
+                            )}
                 />
             </View>
 
