@@ -1,4 +1,4 @@
-import {addDeck} from "../actions/Deck";
+import {ADD_Deck} from "../actions/deck";
 
 const INITIAL_STATE = {
     decks:{
@@ -13,13 +13,12 @@ const INITIAL_STATE = {
     }
 }
 export default function decks(state=INITIAL_STATE, action){
+    console.log("Hello")
     switch (action.type) {
-        case addDeck:
-            return {
-                ...state,
-                deckName:action.deckName
-            }
-
+        case ADD_Deck:
+            return {decks:{
+                    ...state.decks,
+                    ...action.deck}}
         default:
             return state
     }

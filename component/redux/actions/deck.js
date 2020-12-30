@@ -2,10 +2,10 @@ export const ADD_QUESTION = "ADD_QUESTION"
 export const ADD_Deck = "ADD_Deck"
 
 
-export function addDeck({deckName }){
+export function addDeck(deck){
     return{
         type:ADD_Deck,
-        deckName
+        deck:deck
     }
 }
 

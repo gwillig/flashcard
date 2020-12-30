@@ -11,14 +11,6 @@ import CardAdd from "./CardAdd";
 class DeckList extends React.Component{
     constructor(props) {
         super(props)
-
-
-
-    }
-    state={
-        decks:[{name:"REACT",amountCards:"30"},
-            {name:"Backend",amountCards:"15"}
-        ]
     }
     render(){
 

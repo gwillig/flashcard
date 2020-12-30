@@ -11,12 +11,23 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from './component/redux/reducers'
 import middleware from './component/redux/middleware'
+import {addDeck} from "./component/redux/actions/deck";
 
 const store = createStore(reducer, middleware)
+
+// store.dispatch(addDeck({misc1:[
+//         {id:1,
+//             question:"What is green?",
+//             answer:"Gras is green"},
+//         {id:2,
+//             question:"What is blue?",
+//             answer:"The sky is blue"}
+//     ]}))
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+
     return (
         <Provider store={store}>
         <NavigationContainer>
