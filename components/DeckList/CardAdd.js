@@ -1,8 +1,7 @@
 import React from 'react';
 import {addQuestion} from "../redux/actions/deck";
 import { connect } from 'react-redux';
-
-import { Text, View, StyleSheet,TextInput,Button ,FlatList  } from 'react-native';
+import {View, StyleSheet,TextInput,Button} from 'react-native';
 
 class CardAdd extends React.Component{
     constructor(props) {
@@ -11,20 +10,31 @@ class CardAdd extends React.Component{
             question:"",
             answer:""
         }
-
         this.handleChangeAnswer = this.handleChangeAnswer.bind(this);
         this.handleChangeQuestion = this.handleChangeQuestion.bind(this);
     }
 
     handleChangeQuestion(text) {
+        /*
+        *@description:
+        * Set the current the of the input field question to the state
+        **/
         this.setState({question: text});
     }
+
     handleChangeAnswer(text) {
+        /*
+        *@description:
+        * Set the current the of the input field answer to the state
+        **/
         this.setState({answer: text});
     }
 
    submitForm=(e)=>{
-
+       /*
+       *@description:
+       * Submit the form to create a new question
+       **/
         //1.Step: Get Value of question and answer
         let question = this.state.question
         let answer = this.state.answer
@@ -34,10 +44,9 @@ class CardAdd extends React.Component{
         const { dispatch} = this.props
         dispatch(
             addQuestion(question,answer,deckName)
-
         )
-
     }
+
     render(){
         return (
             <View style={styles.container}>

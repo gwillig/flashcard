@@ -34,7 +34,6 @@ class Quiz extends React.Component {
         /*
         * @description:
         * Show on click the answer of a question*/
-
         this.setState(prevState => ({
             isToggleOn: !prevState.isToggleOn
         }));

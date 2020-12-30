@@ -1,17 +1,14 @@
 import * as React from 'react';
-import { Button, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import DeckListStackScreen from './component/DeckList/DeckListStackScreen'
-import DeckAdd from './component/DeckAdd/DeckAdd'
+import DeckListStackScreen from './components/DeckList/DeckListStackScreen'
+import DeckAdd from './components/DeckAdd/DeckAdd'
 import {MaterialCommunityIcons} from "@expo/vector-icons";
 //Redux
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import reducer from './component/redux/reducers'
-import middleware from './component/redux/middleware'
-import {addQuestion} from "./component/redux/actions/deck";
+import reducer from './components/redux/reducers'
+import middleware from './components/redux/middleware'
 
 const store = createStore(reducer, middleware)
 

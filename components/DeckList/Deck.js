@@ -1,12 +1,6 @@
 import React from 'react';
 import {Text, View, StyleSheet, Button} from 'react-native';
 import DeckDetails from "./DeckDetails";
-import {createStackNavigator} from "@react-navigation/stack";
-
-
-const DeckStack = createStackNavigator();
-
-
 
 export default class Deck extends React.Component {
 

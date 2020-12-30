@@ -4,7 +4,7 @@ import generateUID from "../utils/helper"
 
 const INITIAL_STATE = {
     decks:{
-        misc:[
+        Example_1:[
             {id:1,
                 question:"What has the color green?",
                 answer:"Gras is green"},
@@ -12,7 +12,7 @@ const INITIAL_STATE = {
                 question:"What is blue?",
                 answer:"The sky is blue"}
         ],
-        misc2:[
+        Example_2:[
             {id:1,
                 question:"What can be red?",
                 answer:"An apple can be red"},

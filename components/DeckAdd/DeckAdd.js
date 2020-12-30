@@ -10,15 +10,22 @@ class DeckAdd extends React.Component{
         this.state = {
             value_input:""
         }
-
         this.handleChange = this.handleChange.bind(this);
     }
-    handleChange (text) {
 
+    handleChange (text) {
+        /*
+        *@description:
+        * Set the current the of the input field to the state
+        **/
         this.setState({value_input: text});
     }
-    submitForm=(e)=>{
 
+    submitForm=(e)=>{
+        /*
+        *@description:
+        * Submit the form to create a new deck
+        **/
         //1.Step: Get Value of input
         let value_input = this.state.value_input
         //2.Step: Dispatch to store to create a new deck with 0 cards
@@ -83,6 +90,5 @@ const styles = StyleSheet.create({
         margin: 24,
     }
 });
-
 
 export default connect()(DeckAdd);
