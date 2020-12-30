@@ -9,10 +9,9 @@ export function addDeck(deck){
     }
 }
 
-
-export function addQuestion({question,answer,deckName }){
+export function addQuestion(question,answer,deckName){
     return{
-        type:ADD_Deck,
+        type:ADD_QUESTION,
         question,
         answer,
         deckName

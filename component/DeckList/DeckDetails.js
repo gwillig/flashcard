@@ -1,32 +1,34 @@
 import React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
+import {connect} from 'react-redux'
 
 
-
-export default class DeckDetails extends React.Component {
+class DeckDetails extends React.Component {
 
     render(){
 
+        let deckName = this.props.route.params.deckName
+        let amountCards = this.props.decks[deckName].amountCards
         return (
             <View style={styles.containerBtn}>
                 <View style={styles.deckContainer}>
-                    <Text style={styles.title}>{this.props.route.params.deckName}</Text>
+                    <Text style={styles.title}>{deckName}</Text>
                     <Text style={styles.subtitle}>
-                        {this.props.route.params.amountCards} cards
+                        {amountCards} cards
                     </Text>
                 </View>
                 <View style={{marginTop: 15}}>
                     <Button
                         buttonStyle={styles.btn}
                         title="Start Quiz"
-                        onPress={() => this.props.navigation.navigate('Quiz')}
+                        onPress={() => this.props.navigation.navigate('Quiz',{deckName:deckName})}
                     />
                 </View>
                 <View style={{marginTop: 15}}>
                     <Button
                         buttonStyle={styles.btn}
                         title="Add Card"
-                        onPress={() => this.props.navigation.navigate('CardAdd')}
+                        onPress={() => this.props.navigation.navigate('CardAdd',{deckName:deckName})}
                     />
                 </View>
 
@@ -70,3 +72,17 @@ const styles= StyleSheet.create({
     }
 })
 
+
+const mapStateToProps = (state) => {
+    const decks= {}
+
+    for(let key of Object.keys(state.decks.decks)){
+
+        decks[key]={amountCards:state.decks.decks[key].length}
+
+
+    }
+    return { decks }
+};
+
+export default connect(mapStateToProps)(DeckDetails)

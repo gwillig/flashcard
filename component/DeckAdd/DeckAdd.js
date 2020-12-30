@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet,TextInput,Button ,FlatList,Form  } from 'react-native';
+import { Text, View, StyleSheet,TextInput,Button} from 'react-native';
 import {addDeck} from "../redux/actions/deck";
 import { connect } from 'react-redux';
 
@@ -14,7 +14,7 @@ class DeckAdd extends React.Component{
         this.handleChange = this.handleChange.bind(this);
     }
     handleChange (text) {
-        console.log('handle change called');
+
         this.setState({value_input: text});
     }
     submitForm=(e)=>{
@@ -26,7 +26,10 @@ class DeckAdd extends React.Component{
         dispatch(
             addDeck({[`${value_input}`]:[]})
         )
-
+        //3.Step: Empty input
+        this.setState({value_input: ""});
+        //4.Step: Navigate to DeckListStackScreen
+        this.props.navigation.navigate('DeckListStackScreen')
     }
     render(){
         return(
@@ -37,7 +40,7 @@ class DeckAdd extends React.Component{
                         style={styles.deckTitle}
                         onChangeText={this.handleChange}
                         placeholder="Deck Title"
-                        value={this.state.inputfield}
+                        value={this.state.value_input}
                     />
                     <Button
                         onPress={this.submitForm.bind(this)}
@@ -49,47 +52,6 @@ class DeckAdd extends React.Component{
             </View>
         )
     }
-}
-
-const DeckAdd1 = () => {
-    const [value, onChangeText] = React.useState('');
-    let submitForm=(e)=>{
-        debugger
-
-        dispatch(
-            addDeck({misc1:[
-                {id:1,
-                    question:"What is green?",
-                    answer:"Gras is green"},
-                {id:2,
-                    question:"What is blue?",
-                    answer:"The sky is blue"}
-            ]})
-        )
-
-    }
-
-
-    return (
-        <View style={styles.container}>
-            <Text style={styles.title}>What is the title of your new decks?</Text>
-            <View style={styles.containerInput}>
-                <TextInput
-                    style={styles.deckTitle}
-                    onChangeText={text => onChangeText(text)}
-                    placeholder="Deck Title"
-                    value={value}
-                />
-                <Button
-                    onPress={submitForm.bind(this)}
-                    title="Submit"
-                    accessibilityLabel="Submit decks title"
-                />
-            </View>
-
-        </View>
-
-    );
 }
 
 const styles = StyleSheet.create({

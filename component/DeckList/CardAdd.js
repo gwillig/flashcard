@@ -1,31 +1,70 @@
 import React from 'react';
+import {addQuestion} from "../redux/actions/deck";
+import { connect } from 'react-redux';
+
 import { Text, View, StyleSheet,TextInput,Button ,FlatList  } from 'react-native';
 
-const CardAdd = () => {
-    let submitform=(e)=>{
-        console.log(e)
+class CardAdd extends React.Component{
+    constructor(props) {
+        super(props)
+        this.state = {
+            question:"",
+            answer:""
+        }
+
+        this.handleChangeAnswer = this.handleChangeAnswer.bind(this);
+        this.handleChangeQuestion = this.handleChangeQuestion.bind(this);
     }
-    return (
-        <View style={styles.container}>
-            <View style={styles.containerInput}>
-                <TextInput
-                    style={styles.deckTitle}
-                    value="Question"
-                />
-                <TextInput
-                style={styles.deckTitle}
-                value="Answer"
-            />
-                <Button
-                    // onPress={submitform}
-                    title="Submit"
-                    accessibilityLabel="Submit decks title"
-                />
+
+    handleChangeQuestion(text) {
+        this.setState({question: text});
+    }
+    handleChangeAnswer(text) {
+        this.setState({answer: text});
+    }
+
+   submitForm=(e)=>{
+
+        //1.Step: Get Value of question and answer
+        let question = this.state.question
+        let answer = this.state.answer
+        //2.Step: Get name of current deck
+        let deckName = this.props.route.params.deckName
+        //3.Step: Dispatch to store to create a new deck with 0 cards
+        const { dispatch} = this.props
+        dispatch(
+            addQuestion(question,answer,deckName)
+
+        )
+
+    }
+    render(){
+        return (
+            <View style={styles.container}>
+                <View style={styles.containerInput}>
+                    <TextInput
+                        style={styles.deckTitle}
+                        onChangeText={this.handleChangeQuestion}
+                        placeholder="Question"
+                        value={this.state.question}
+                    />
+                    <TextInput
+                        style={styles.deckTitle}
+                        onChangeText={this.handleChangeAnswer}
+                        placeholder="Answer"
+                        value={this.state.answer}
+                    />
+                    <Button
+                        onPress={this.submitForm.bind(this)}
+                        title="Submit"
+                        accessibilityLabel="Submit new question"
+                    />
+                </View>
+
             </View>
 
-        </View>
-
-    );
+        );
+    }
 }
 
 const styles = StyleSheet.create({
@@ -49,4 +88,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default CardAdd;
+export default connect()(CardAdd);
