@@ -5,20 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/DeckAdd/DeckAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DeckAdd/DeckAdd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/DeckList/CardAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DeckList/CardAdd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/DeckList/Deck.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DeckList/Deck.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/DeckList/DeckDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DeckList/DeckDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/DeckList/DeckListStackScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DeckList/DeckListStackScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/DeckList/Quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DeckList/Quiz.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/redux/actions/deck.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/redux/actions/deck.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/redux/middleware/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/redux/middleware/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/redux/middleware/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/redux/middleware/logger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/redux/reducers/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/redux/reducers/decks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/redux/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/redux/utils/helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/redux/utils/helper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deleteme.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design_architecture.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/design_architecture.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DeckList/Quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DeckList/Quiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/redux/utils/helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/redux/utils/helper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +36,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -65,7 +56,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609240264368</updated>
-      <workItem from="1609240265836" duration="55449000" />
+      <workItem from="1609240265836" duration="57973000" />
+      <workItem from="1609416831645" duration="1772000" />
+      <workItem from="1609418647394" duration="441000" />
     </task>
     <servers />
   </component>
@@ -82,6 +75,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -89,7 +83,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/components/DeckAdd/DeckAdd.js</url>
           <line>7</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

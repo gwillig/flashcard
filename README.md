@@ -16,6 +16,7 @@ The file design_architecture.pdf shows the planning process of project
       2.2 Third Party Content
 ```
 
+![](readme_material/application.gif)
 
 ### 1. Getting Started
 These instructions cover the setup and installation on your local machine for developing and testing purposes.

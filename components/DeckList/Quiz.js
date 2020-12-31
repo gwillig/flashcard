@@ -1,6 +1,10 @@
 import React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
 import {connect} from 'react-redux'
+import {
+        clearLocalNotification,
+        setLocalNotification
+} from "../redux/utils/Notification";
 
 class Quiz extends React.Component {
     constructor(props) {
@@ -28,6 +32,7 @@ class Quiz extends React.Component {
                 score: ++prevState.score
             }));
         }
+        clearLocalNotification().then(setLocalNotification())
 
     }
     showAnswer() {
